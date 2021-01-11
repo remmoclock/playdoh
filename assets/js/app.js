@@ -9,51 +9,30 @@ var BACK_POS
 //
 
 $(function () {
-  resizeHandler()
-  $(window).resize(resizeHandler)
+  // create all dynamic elements
+  selectedEls.map(createEl)
+
+  // perform resize repositioning
+  positionEls()
+  $(window).resize(positionEls)
+
   // set up menu button hover change button
   createMenuHoverHandler(
     ".menu-1-closed, .menu-2-closed, .menu-3-closed, .menu-4-closed, .menu-5-closed, .menu-6-closed, .menu-7-closed",
     "closed"
   )
 
-  // magnify function
-  function magnify() {
-    // set up image magnification
-    if (typeof $(".magnify").blowup == "function")
-      $(".magnify").blowup({
-        background: "#F39C12",
-        width: 250,
-        height: 250,
-        scale: 1,
-      })
-  }
-
-  // set up scrollbox shadowbox
-  function openShadowBox(str) {
-    $(".imageDisplay > img").attr("src", str)
-    $(".shadow").css("display", "inherit")
-    $(".imageDisplay").css("display", "inherit")
-    magnify()
-  }
-  function closeShadowBox() {
-    $(".shadow").css("display", "none")
-    $(".imageDisplay").css("display", "none")
-  }
-
   $(".lin").click(function (e) {
     let imgStr = $(".imageDisplay > img")[0].src
-    console.log(imgStr)
     var verso = imgStr.indexOf("-verso")
     var p = imgStr.lastIndexOf(".")
     if (verso < 0) {
       imgStr = imgStr.substring(0, p) + "-verso" + imgStr.substring(p)
-      btnStr = "/assets/img/buttons/button-pro.png"
+      btnStr = "../assets/img/buttons/button-pro.png"
     } else {
       imgStr = imgStr.substring(0, verso) + imgStr.substring(p)
-      btnStr = "/assets/img/buttons/button-ref.png"
+      btnStr = "../assets/img/buttons/button-ref.png"
     }
-    console.log("NOUVEAU STRING: ", imgStr)
     $(".imageDisplay > img").attr("src", imgStr)
     $(".lin").attr("src", btnStr)
     magnify()
@@ -108,7 +87,6 @@ $(function () {
       str.substring(p1 + 1, p2) +
       "-pop" +
       str.substring(p2)
-    console.log(str)
     openShadowBox(str)
   })
 
@@ -121,6 +99,35 @@ $(function () {
   })
   $(".shadow").click(closeShadowBox)
 })
+
+//
+// functions for page handling
+//
+//
+
+// magnify function
+function magnify() {
+  // set up image magnification
+  if (typeof $.fn.blowup == "function")
+    $(".magnify").blowup({
+      background: "#F39C12",
+      width: 250,
+      height: 250,
+      scale: 1,
+    })
+}
+
+// set up scrollbox shadowbox
+function openShadowBox(str) {
+  $(".imageDisplay > img").attr("src", str)
+  $(".shadow").css("display", "inherit")
+  $(".imageDisplay").css("display", "inherit")
+  magnify()
+}
+function closeShadowBox() {
+  $(".shadow").css("display", "none")
+  $(".imageDisplay").css("display", "none")
+}
 
 //
 // handle menu item hover
@@ -137,8 +144,8 @@ function handleMenu(state) {
     var $this = $(this)
     var n = $this.data("n")
     var newName = "menu-" + n + "-" + state
-    var newEl = getElByName(newName)
-    createEl(newEl)
+    var $el = createEl(newName)
+    positionEl(newName)
     createMenuHoverHandler("." + newName, state)
     $this.remove()
   }
@@ -149,21 +156,19 @@ function handleMenu(state) {
 //
 //
 
-function resizeHandler() {
-  // remove old elements
-  $(".del").remove()
-  // background
+function positionEls() {
+  // recalculate background
   BACK_POS = calcImageDimensions()
-  // elements
-  selectedEls.map(createEl)
+  // reposition elements
+  selectedEls.map(positionEl)
 }
 
-function createEl(el) {
-  if (typeof el == "string") el = getElByName(el)
-  if (!el) return
-  var newEl = transformElement(el, BACK_POS)
-  var $el = $(el.el).appendTo("body")
-  $el.css({
+function positionEl(el) {
+  //console.log(" >> positioning ", el)
+  var nel = getElByName(el)
+  if (!nel) return
+  var newEl = transformElement(nel, BACK_POS)
+  $("." + nel.name).css({
     top: newEl.y,
     left: newEl.x,
     width: newEl.w,
@@ -171,8 +176,15 @@ function createEl(el) {
   })
 }
 
+function createEl(el) {
+  //console.log(" >> creating ", el)
+  var nel = getElByName(el)
+  if (!nel) return
+  return $(nel.el).appendTo("body")
+}
+
 function getElByName(name) {
-  return ELEMENTS.filter((m) => m.name == name)[0]
+  return ELEMENTS.find((m) => m.name == name)
 }
 
 //
@@ -190,7 +202,7 @@ function transformElement(elementPos, BACK_POS) {
 }
 
 //
-// calculate the area
+// calculate the area of zindoz
 //
 //
 function calcImageDimensions() {
@@ -217,7 +229,7 @@ function calcImageDimensions() {
     img.y = 0
     img.x = (win.w - img.w) / 2
   }
-  console.log("image:", img)
+  //console.log("image:", img)
   return img
 }
 

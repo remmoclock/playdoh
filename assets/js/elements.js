@@ -146,7 +146,7 @@ var ELEMENTS = [
     y: 650,
     w: 3200,
     h: 1000,
-    el: `<div class="scrollbox-2 del"></div>`,
+    el: `<div class="scrollbox-6 del"></div>`,
   },
   //
   //

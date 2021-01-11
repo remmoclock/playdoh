@@ -38,6 +38,7 @@ $(function () {
     magnify()
   })
 
+ 
   $(".plan1").click(function (e) {
     openShadowBox("../assets/img/plans/planpop1.png")
   })
@@ -61,37 +62,37 @@ $(function () {
     openShadowBox("../assets/img/cal-1pop.png")
   })
 
-  $(".scrollbox-4 img, .scrollbox-5 img").click(function (e) {
+  $(".scrollbox-4 img, .scrollbox-5 img, .scrollbox-6 img, .scrollbox img").click(function (e) {
     openShadowBox(e.target.src)
   })
-  $(".scrollbox ul li:not(:first-child) img").click(function (e) {
-    var str = e.target.src
-    var p1 = str.lastIndexOf("/")
-    var p2 = str.lastIndexOf(".")
-    str =
-      str.substring(0, p1 + 1) +
-      "pop1/" +
-      str.substring(p1 + 1, p2) +
-      "-pop" +
-      str.substring(p2)
-    openShadowBox(str)
-  })
+  // $(".scrollbox ul li:not(:first-child) img").click(function (e) {
+  //   var str = e.target.src
+  //   var p1 = str.lastIndexOf("/")
+  //   var p2 = str.lastIndexOf(".")
+  //   str =
+  //     str.substring(0, p1 + 1) +
+  //     "pop1/" +
+  //     str.substring(p1 + 1, p2) +
+  //     "-pop" +
+  //     str.substring(p2)
+  //   openShadowBox(str)
+  // })
 
-  $(".scrollbox-4 ul li img").click(function (e) {
-    var str = e.target.src
-    var p1 = str.lastIndexOf("/")
-    var p2 = str.lastIndexOf(".")
-    str =
-      str.substring(0, p1 + 1) +
-      "pop1/" +
-      str.substring(p1 + 1, p2) +
-      "-pop" +
-      str.substring(p2)
-    openShadowBox(str)
-  })
+  // $(".scrollbox-4 ul li img").click(function (e) {
+  //   var str = e.target.src
+  //   var p1 = str.lastIndexOf("/")
+  //   var p2 = str.lastIndexOf(".")
+  //   str =
+  //     str.substring(0, p1 + 1) +
+  //     "pop1/" +
+  //     str.substring(p1 + 1, p2) +
+  //     "-pop" +
+  //     str.substring(p2)
+  //   openShadowBox(str)
+  // })
 
   $(
-    ".c1, .c2, .c3, .c4, .c5, .c6, .k1, .k2, .offre1, .offre2, .offre3, .offre4, .h1, .h2, .h3, .h4"
+    ".c1, .c2, .c3, .c4, .c5, .c6, .offre1, .offre2, .offre3, .offre4, .h1, .h2, .h3, .h4, .p1, .p2, .p3, .p4, .p5 , .p6, .p7, .p8, .p9, .p10, .p11, .p12 , .s1, .s2, .s3, .s4, .s5 , .s6, .s7, .s8, .s9, .s10, .s11, .s12, .s13, .s14, .s15,.s16, .s17, .s18,.s19, .s20, .s21, .s22, .s23, .s24, .s25, .s26, .s27"
   ).click(function (e) {
     var bg = $(this).css("background-image")
     bg = bg.replace("url(", "").replace(")", "").replace(/\"/gi, "")

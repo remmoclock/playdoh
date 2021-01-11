@@ -21,10 +21,10 @@ var ELEMENTS = [
   },
   {
     name: "scrollbox",
-    x: 650,
-    y: 650,
-    w: 2120,
-    h: 980,
+    x: 620,
+    y: 610,
+    w: 2400,
+    h: 1200,
     el: `<div class="scrollbox del">
     <ul>
         <li><img src="../assets/img/1_2/l6.png" /></li>
@@ -86,7 +86,7 @@ var ELEMENTS = [
     x: 100,
     y: 660,
     w: 2220,
-    h: 990,
+    h: 1050,
     el: `<div class="scrollbox-4 del">
       <ul>
         <li><img src="../assets/img/pates/p1.png" /></li>
@@ -112,14 +112,7 @@ var ELEMENTS = [
     h: 990,
     el: `<div class="scrollbox-5 del">
       <ul>
-      <li><img src="../assets/img/kit/k3.png" /></li>
-      <li><img src="../assets/img/kit/k5.png" /></li>
-      <li><img src="../assets/img/kit/k6.png" /></li>
-      <li><img src="../assets/img/kit/k7.png" /></li>
-      <li><img src="../assets/img/kit/k8.png" /></li>
-      <li><img src="../assets/img/kit/k9.png" /></li>
       <li><img src="../assets/img/kit/k1.png" /></li>
-      <li><img src="../assets/img/kit/k10.png" /></li>
       <li><img src="../assets/img/kit/k2.png" /></li>
       </ul>
     </div>`,
@@ -144,9 +137,24 @@ var ELEMENTS = [
     name: "scrollbox-6",
     x: 150,
     y: 650,
-    w: 3200,
+    w: 2000,
     h: 1000,
-    el: `<div class="scrollbox-6 del"></div>`,
+    el: `<div class="scrollbox-6 del">
+    <ul>
+      <li><img src="../assets/img/happy/h1.png" /></li>
+      <li><img src="../assets/img/happy/h2.png" /></li>
+      <li><img src="../assets/img/happy/h3.png" /></li>
+      <li><img src="../assets/img/happy/h4.png" /></li>
+      <li><img src="../assets/img/happy/h5.png" /></li>
+      <li><img src="../assets/img/happy/h6.png" /></li>
+      <li><img src="../assets/img/happy/h7.png" /></li>
+      <li><img src="../assets/img/happy/h8.png" /></li>
+      <li><img src="../assets/img/happy/h9.png" /></li>
+      <li><img src="../assets/img/happy/h10.png" /></li>
+      <li><img src="../assets/img/happy/h11.png" /></li>
+      <li><img src="../assets/img/happy/h12.png" /></li>
+      </ul>
+      </div>`,
   },
   //
   //
@@ -275,13 +283,13 @@ var ELEMENTS = [
     y: 90,
     w: 600,
     h: 300,
-    el: '<a class="button-tuto del" href="/"></a>',
+    el: '<a class="button-tuto del" href="/assets/img/tuto.pdf"></a>',
   },
   {
     name: "button-1-1",
-    x: 1350,
-    y: 1740,
-    w: 853,
+    x: 1600,
+    y: 1900,
+    w: 540,
     h: 276,
     el: '<a class="button-1-1 del" href="1_1.html"></a>',
   },
@@ -311,9 +319,9 @@ var ELEMENTS = [
   },
   {
     name: "button-3-1",
-    x: 1250,
-    y: 1820,
-    w: 500,
+    x: 1200,
+    y: 1880,
+    w: 450,
     h: 320,
     el: '<a class="button-3-1 del" href="3_1.html"></a>',
   },
@@ -485,10 +493,10 @@ var ELEMENTS = [
 
   {
     name: "calendrier",
-    x: 500,
-    y: 610,
-    w: 2000,
-    h: 1200,
+    x: 240,
+    y: 410,
+    w: 2390,
+    h: 1500,
     el: '<a class="calendrier cal"></a>',
   },
 
@@ -677,49 +685,12 @@ var ELEMENTS = [
     h: 900,
     el: '<a class="c offre4 del"></a>',
   },
-
-  {
-    name: "h1",
-
-    x: 271,
-    y: 860,
-    w: 849,
-    h: 550,
-    el: '<a class="c h1 del"></a>',
-  },
-  {
-    name: "h2",
-
-    x: 760,
-    y: 860,
-    w: 849,
-    h: 550,
-    el: '<a class="c h2 del"></a>',
-  },
-  {
-    name: "h3",
-
-    x: 1550,
-    y: 860,
-    w: 1049,
-    h: 550,
-    el: '<a class="c h3 del"></a>',
-  },
-  {
-    name: "h4",
-
-    x: 2580,
-    y: 860,
-    w: 849,
-    h: 550,
-    el: '<a class="c h4 del"></a>',
-  },
   {
     name: "cal-1",
 
-    x: 810,
-    y: 1150,
-    w: 449,
+    x: 1010,
+    y: 1050,
+    w: 500,
     h: 250,
     el: '<a class="cal-1 del"></a>',
   },

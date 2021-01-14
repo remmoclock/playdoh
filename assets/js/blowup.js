@@ -1,6 +1,8 @@
 $(function ($) {
   $.fn.blowup = function (attributes) {
-    var $element = this;
+
+    console.log('loading blowup');
+    var $element = this
 
     // If the target element is not an image
     if (!$element.is("img")) {

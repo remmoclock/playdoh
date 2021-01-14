@@ -24,15 +24,18 @@ $(function () {
 
   $(".lin").click(function (e) {
     let imgStr = $(".imageDisplay > img")[0].src
+    console.log('lin', imgStr);
+    var start = imgStr.indexOf("/assets/img")
     var verso = imgStr.indexOf("-verso")
     var p = imgStr.lastIndexOf(".")
     if (verso < 0) {
-      imgStr = imgStr.substring(0, p) + "-verso" + imgStr.substring(p)
+      imgStr = ".." + imgStr.substring(start, p) + "-verso" + imgStr.substring(p)
       btnStr = "../assets/img/buttons/button-pro.png"
     } else {
-      imgStr = imgStr.substring(0, verso) + imgStr.substring(p)
+      imgStr = ".." + imgStr.substring(start, verso) + imgStr.substring(p)
       btnStr = "../assets/img/buttons/button-ref.png"
     }
+    console.log('lin', imgStr);
     $(".imageDisplay > img").attr("src", imgStr)
     $(".lin").attr("src", btnStr)
     magnify()

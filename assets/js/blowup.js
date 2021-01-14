@@ -83,6 +83,7 @@ $(function ($) {
     console.log($IMAGE_URL);
     console.log($element);
     console.log($element.attr("src"));
+    console.log(encodeURI($IMAGE_URL));
     $element.mousemove(function (e) {
       // Lens position coordinates
       var lensX = e.pageX - $options.width / 2;

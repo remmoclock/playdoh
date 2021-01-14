@@ -283,7 +283,7 @@ var ELEMENTS = [
     y: 90,
     w: 600,
     h: 300,
-    el: '<a class="button-tuto del" href="/assets/img/tuto.pdf"></a>',
+    el: '<a class="button-tuto del" href="../assets/img/tuto.pdf"></a>',
   },
   {
     name: "button-1-1",

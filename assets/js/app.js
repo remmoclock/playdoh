@@ -104,6 +104,7 @@ $(function () {
   $(".shadow").click(closeShadowBox)
 })
 
+
 //
 // functions for page handling
 //

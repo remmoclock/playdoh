@@ -64,6 +64,15 @@ $(function () {
   $(".cal-1").click(function (e) {
     openShadowBox("../assets/img/cal-1pop.png")
   })
+  $(".cal-2").click(function (e) {
+    openVideoShadowBox("../assets/img/video1.mp4")
+  })
+  $(".cal-3").click(function (e) {
+    openVideoShadowBox("../assets/img/video2.mp4")
+  })
+  $(".cal-4").click(function (e) {
+    openVideoShadowBox("../assets/img/video3.mp4")
+  })
 
   $(".scrollbox-4 img, .scrollbox-5 img, .scrollbox-6 img, .scrollbox img").click(function (e) {
     openShadowBox(e.target.src)
@@ -102,6 +111,7 @@ $(function () {
     openShadowBox(bg)
   })
   $(".shadow").click(closeShadowBox)
+  $(".shadow").click(closeVideoShadowBox)
 })
 
 
@@ -132,6 +142,15 @@ function openShadowBox(str) {
 function closeShadowBox() {
   $(".shadow").css("display", "none")
   $(".imageDisplay").css("display", "none")
+}
+function openVideoShadowBox(str) {
+  $(".videoDisplay > video").attr("src", str)
+  $(".shadow").css("display", "inherit")
+  $(".videoDisplay").css("display", "inherit")
+}
+function closeVideoShadowBox() {
+  $(".shadow").css("display", "none")
+  $(".videoDisplay").css("display", "none")
 }
 
 //

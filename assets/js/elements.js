@@ -153,6 +153,7 @@ var ELEMENTS = [
       <li><img src="../assets/img/happy/h10.png" /></li>
       <li><img src="../assets/img/happy/h11.png" /></li>
       <li><img src="../assets/img/happy/h12.png" /></li>
+      <li><img src="../assets/img/happy/h13.png" /></li>
       </ul>
       </div>`,
   },
@@ -693,5 +694,32 @@ var ELEMENTS = [
     w: 500,
     h: 250,
     el: '<a class="cal-1 del"></a>',
+  },
+  {
+    name: "cal-2",
+
+    x: 620,
+    y: 730,
+    w: 350,
+    h: 200,
+    el: '<a class="cal-2 del"></a>',
+  },
+  {
+    name: "cal-3",
+
+    x: 620,
+    y: 880,
+    w: 350,
+    h: 250,
+    el: '<a class="cal-3 del"></a>',
+  },
+  {
+    name: "cal-4",
+
+    x: 620,
+    y: 1650,
+    w: 440,
+    h: 200,
+    el: '<a class="cal-4 del"></a>',
   },
 ]

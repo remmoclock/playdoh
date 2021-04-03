@@ -58,6 +58,8 @@ var ELEMENTS = [
 
       <ul>
       <li><img src="../assets/img/1_2/l4.png" /></li>
+      <li><img src="../assets/img/1_2/contents/s28.png" /></li>
+      <li><img src="../assets/img/1_2/contents/s29.png" /></li>
       <li><img src="../assets/img/1_2/contents/s10.png" /></li>
       <li><img src="../assets/img/1_2/contents/s11.png" /></li>
       <li><img src="../assets/img/1_2/contents/s12.png" /></li>
@@ -118,12 +120,19 @@ var ELEMENTS = [
     </div>`,
   },
   {
-    name: "scrollbox-3",
+    name: "scrollbox-7",
     x: 180,
     y: 640,
     w: 2255,
     h: 1000,
-    el: `<div class="scrollbox-3 del"></div>`,
+    el: `<div class="scrollbox-7 del">
+    <ul>
+    <li><img src="../assets/img/distributeurs/d1.png" /></li>
+    <li><img src="../assets/img/distributeurs/d2.png" /></li>
+    <li><img src="../assets/img/distributeurs/d3.png" /></li>
+    <li><img src="../assets/img/distributeurs/d4.png" /></li>
+    </ul>
+    </div>`,
   },
   {
     name: "scrollbox-2",
@@ -335,6 +344,14 @@ var ELEMENTS = [
     el: '<a class="button-3-2 del" href="3_2.html"></a>',
   },
   {
+    name: "button-3-3",
+    x: 1100,
+    y: 1700,
+    w: 1900,
+    h: 350,
+    el: '<a class="button-3-3 del" href="3_3.html"></a>',
+  },
+  {
     name: "button-4-2",
     x: 157,
     y: 727,
@@ -500,6 +517,14 @@ var ELEMENTS = [
     h: 1500,
     el: '<a class="calendrier cal"></a>',
   },
+  {
+    name: "calendrier2",
+    x: 250,
+    y: 430,
+    w: 2220,
+    h: 1500,
+    el: '<a class="calendrier2 cal"></a>',
+  },
 
   {
     name: "c1",
@@ -587,13 +612,13 @@ var ELEMENTS = [
     el: '<a class="c d2 del"></a>',
   },
   {
-    name: "d3",
+    name: "d4",
 
     x: 1650,
     y: 720,
     w: 530,
     h: 908,
-    el: '<a class="c d3 del"></a>',
+    el: '<a class="c d4 del"></a>',
   },
 
   {
@@ -696,6 +721,15 @@ var ELEMENTS = [
     el: '<a class="cal-1 del"></a>',
   },
   {
+    name: "cal-5",
+
+    x: 615,
+    y: 1240,
+    w: 350,
+    h: 250,
+    el: '<a class="cal-5 del"></a>',
+  },
+  {
     name: "cal-2",
 
     x: 620,
@@ -703,6 +737,15 @@ var ELEMENTS = [
     w: 350,
     h: 200,
     el: '<a class="cal-2 del"></a>',
+  },
+  {
+    name: "cal-6",
+
+    x: 1075,
+    y: 730,
+    w: 340,
+    h: 200,
+    el: '<a class="cal-6 del"></a>',
   },
   {
     name: "cal-3",

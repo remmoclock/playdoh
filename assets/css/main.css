@@ -302,6 +302,7 @@ body {
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
+
 /* scrollbox 6  */
 
 .scrollbox-6 {
@@ -355,6 +356,64 @@ body {
   transition: all 0.2s ease-in-out;
 }
 .scrollbox-6 ul li img:hover {
+  box-shadow: 0px 0px 10px -5px #ff9800;
+  transform: scale(1.1);
+}
+
+/* //////// */
+/* scrollbox 6  */
+
+.scrollbox-7 {
+  background-color: #ffbe01;
+  border-radius: 25px;
+  overflow: scroll;
+  padding: 10;
+  padding-left: 20;
+  opacity: 0.9;
+}
+
+.scrollbox-7::-webkit-scrollbar {
+  width: 1em;
+}
+
+.scrollbox-7::-webkit-scrollbar-thumb {
+  background-color: yellow;
+  border-radius: 10px;
+  overflow: visible;
+}
+.scrollbox-7::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+.scrollbox-7:hover {
+  background-color: #ffbe01;
+  filter: none;
+  transform: none;
+}
+.scrollbox-7 ul {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  list-style-type: none;
+  margin-top: 10px;
+}
+.scrollbox-7 ul li {
+  display: flex;
+  justify-content: center;
+  height: 300px;
+  width: 300px;
+  padding: 15px ;
+}
+
+.scrollbox-7 ul li img {
+  max-height: 300px;
+  height: 300px;
+  max-width: 300px;
+  object-fit: contain;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.scrollbox-7 ul li img:hover {
   box-shadow: 0px 0px 10px -5px #ff9800;
   transform: scale(1.1);
 }
@@ -429,6 +488,9 @@ body {
 .button-3-2 {
   background-image: url(../img/buttons/button-3-2.png);
 }
+.button-3-3 {
+  background-image: url(../img/buttons/button-3-3.png);
+}
 .button-4-1 {
   background-image: url(../img/buttons/button-4-1.png);
 }
@@ -492,6 +554,9 @@ body {
 .calendrier {
   background-image: url(../img/back/calendrier.png);
 }
+.calendrier2 {
+  background-image: url(../img/back/calendrier2.png);
+}
 .c {
   cursor: pointer;
 }
@@ -527,6 +592,9 @@ body {
 }
 .d3 {
   background-image: url(../img/distributeurs/d3.png);
+}
+.d4 {
+  background-image: url(../img/distributeurs/d4.png);
 }
 
 .closed-1 {
@@ -615,12 +683,20 @@ body {
   background-image: url(../img/cal-2.png);
   cursor: pointer;
 }
+.cal-6 {
+  background-image: url(../img/cal-6.png);
+  cursor: pointer;
+}
 .cal-3 {
   background-image: url(../img/cal-3.png);
   cursor: pointer;
 }
 .cal-4 {
   background-image: url(../img/cal-4.png);
+  cursor: pointer;
+}
+.cal-5 {
+  background-image: url(../img/cal-5.png);
   cursor: pointer;
 }
 

@@ -122,7 +122,7 @@ body {
   display: inline-block;
   height: 230px;
   width: 230px;
-  padding: 0 15px ;
+  padding: 0 15px;
 }
 .scrollbox ul li:first-child {
   margin-right: 20px;
@@ -275,7 +275,6 @@ body {
   background-color: #ffbe01;
   filter: none;
   transform: none;
-  
 }
 .scrollbox-5 ul {
   display: flex;
@@ -284,8 +283,8 @@ body {
   width: 100%;
 }
 .scrollbox-5 ul li {
- display: flex;
- justify-content: center;
+  display: flex;
+  justify-content: center;
   width: 100%;
   padding: 10px;
 }
@@ -344,7 +343,7 @@ body {
   justify-content: center;
   height: 300px;
   width: 300px;
-  padding: 15px ;
+  padding: 15px;
 }
 
 .scrollbox-6 ul li img {
@@ -402,7 +401,7 @@ body {
   justify-content: center;
   height: 300px;
   width: 300px;
-  padding: 15px ;
+  padding: 15px;
 }
 
 .scrollbox-7 ul li img {
@@ -417,9 +416,6 @@ body {
   box-shadow: 0px 0px 10px -5px #ff9800;
   transform: scale(1.1);
 }
-
-
-
 
 /* //////// */
 
@@ -700,7 +696,6 @@ body {
   cursor: pointer;
 }
 
-
 /* ZOOOOM */
 
 .image {
@@ -715,4 +710,3 @@ body {
 .image img {
   max-width: 100%;
 }
-
